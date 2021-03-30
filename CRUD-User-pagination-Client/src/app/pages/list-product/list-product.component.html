@@ -1,0 +1,29 @@
+<ng-container *ngIf="error; else render">
+  <p>Error: {{ message }}</p>
+  <a [routerLink]="['/home']"> Back to Login</a>
+</ng-container>
+
+<ng-template #render>
+  <div class="flex space-between align-items-center">
+    <a [routerLink]="['/product/create']" class="link">Create new product</a>
+    <ul class="pagination">
+      <ng-container *ngFor="let item of totalPagesArray">
+        <li (click)="navigateToPage(item)">{{ item }}</li>
+      </ng-container>
+    </ul>
+  </div>
+
+  <ul>
+    <ng-container *ngFor="let product of products">
+      <li>
+        <app-card-product
+          (updateList)="Rerender()"
+          [image]="product.image"
+          [name]="product.name"
+          [quantity]="product.quantity"
+          [id]="product.id"
+        ></app-card-product>
+      </li>
+    </ng-container>
+  </ul>
+</ng-template>

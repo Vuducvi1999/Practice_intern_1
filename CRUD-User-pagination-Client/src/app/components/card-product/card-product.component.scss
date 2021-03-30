@@ -1,0 +1,29 @@
+.card-product {
+  border: 1px solid black;
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  p {
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+.deleteAndUpdate {
+  display: flex;
+  justify-content: space-between;
+  .delete,
+  .update {
+    cursor: pointer;
+    margin: 0.2rem;
+    text-decoration: none;
+  }
+  .delete {
+    color: red;
+  }
+  .update {
+    color: blue;
+  }
+}

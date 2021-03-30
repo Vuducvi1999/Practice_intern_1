@@ -1,0 +1,45 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+ul li {
+  flex-basis: 22%;
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+
+.link {
+  margin: 2rem 0;
+  display: block;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.pagination {
+  display: flex;
+  li {
+    cursor: pointer;
+    background-color: #74b9ff;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    &:hover {
+      background-color: #0984e3;
+    }
+  }
+}
+
+.active {
+  background-color: #0984e3;
+}

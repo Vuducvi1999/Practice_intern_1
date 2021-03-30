@@ -1,0 +1,10 @@
+<div class="card-product">
+  <div class="deleteAndUpdate">
+    <div class="delete" (click)="Delete(id)">Delete</div>
+    <a [routerLink]="['/product/update/', id]">Update</a>
+  </div>
+  <img [src]="url + image" />
+  <p>{{ name }}</p>
+  <hr />
+  <p>SL: {{ quantity }}</p>
+</div>

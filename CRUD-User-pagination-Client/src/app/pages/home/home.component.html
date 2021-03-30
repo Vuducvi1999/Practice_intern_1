@@ -1,0 +1,12 @@
+<a [routerLink]="['/product/page/1']"> Go to products </a>
+
+<form [formGroup]="LoginForm" class="formLogin" (ngSubmit)="Submit(LoginForm)">
+  <input type="text" formControlName="name" placeholder="Name" /><br />
+  <input
+    type="password"
+    formControlName="password"
+    placeholder="Password"
+  /><br />
+  <button type="submit" [disabled]="LoginForm.invalid">Submit</button>
+  <p>{{ LoginStatus }}</p>
+</form>

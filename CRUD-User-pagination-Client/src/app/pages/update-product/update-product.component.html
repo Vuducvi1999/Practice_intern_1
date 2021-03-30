@@ -1,0 +1,29 @@
+<ng-container *ngIf="error; else render">
+  <p>Error: {{ messageErr }}</p>
+  <a [routerLink]="['/product/products']"> Back to products</a><br />
+  <a [routerLink]="['/']"> Back to home</a>
+</ng-container>
+
+<ng-template #render>
+  <a [routerLink]="['/home']">Home</a>
+  <br />
+  <a [routerLink]="['/product/page/1']">Products</a>
+
+  <form
+    [formGroup]="UpdateForm"
+    (ngSubmit)="Submit()"
+    class="updateForm"
+    enctype="multipart/form-data"
+  >
+    <input type="text" formControlName="Name" placeholder="Name" /><br />
+
+    <input
+      type="number"
+      formControlName="Quantity"
+      placeholder="Quantity"
+    /><br />
+    <input type="file" (change)="ChangeFile($event)" /><br />
+    <button type="submit">Submit</button>
+    <p>{{ message }}</p>
+  </form>
+</ng-template>
